@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjGraph.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyImage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="verticalProjection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HorizontalProjection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DIPController.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Array1D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CarLogoDetector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dir.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="imgfeatures.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="kdtree.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sift.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xform.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="minpq.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SIFTController.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBaseController.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateLogo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Saver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Graph.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjGraph.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyImage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="verticalProjection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HorizontalProjection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DIPController.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Array1D.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CarLogoDetector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dir.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imgfeatures.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="kdtree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sift.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="minpq.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SIFTController.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SiftFeature.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DataBaseController.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Saver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
