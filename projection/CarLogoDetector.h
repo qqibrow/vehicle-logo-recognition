@@ -57,16 +57,22 @@ public:
 	void outputTextResult( std::ofstream& fout);
 private:
 	// save the template image, loaded in by the databaseLoader
-	vector<temlateLogo> templateImages;
+	std::vector<temlateLogo> templateImages;
 
 	// the sift responses
-	vector<int> responses;
+	std::vector<int> responses;
 
-	// candidate sift match image, used in test process
-	vector<BasicCvApi::MyImagePtr> resultImgs;
+	// candidate sift Given a linked list, remove the nth node from the end of list and return its head.
+
+For example,
+
+   Given linked list: 1->2->3->4->5, and n = 2.
+
+   After removing the second node from the end, the linked list becomes 1->2->3->5.match image, used in test process
+	std::vector<BasicCvApi::MyImagePtr> resultImgs;
 
 	// candidate names
-	vector<std::string> strings;
+	std::vector<std::string> strings;
 
 	enum{ Prior_left = 130, Prior_right = 600,
 	NEIGHBOUR_DIST = 10,};

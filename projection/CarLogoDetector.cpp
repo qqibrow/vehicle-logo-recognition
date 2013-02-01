@@ -34,7 +34,8 @@ void CarLogoDetector::initDataBase(DataBaseController* imageLoader)
 
 IplImage* CarLogoDetector::getCoarseLogoAreaFromImage(IplImage* image )
 {
-	//首先对图像进行处理，缩小图像和提取canny边缘图像
+	
+	// do preprocessing to the images, make it smaller and do canny edge detection
 	DIPController imageProcessing;
 	MyImagePtr smallerImg(imageProcessing.getScaleImage(image,0.5));
 	MyImagePtr cannyImg(imageProcessing.getCannyImage(smallerImg.get()));
@@ -69,19 +70,17 @@ Window canny("cannyImg");
 
 	// get background image and put it in the horizontal projection image
 	IplImage* tempBack = vertical->getGraphImage();
-
-
 	boost::shared_ptr<ProjGraph> horizontal(new HorizontalProjection(cannyImg.get()));
 	vector<int> yArray(cannyImg->height);
 	horizontal->calculateProj(yArray,Boundary(leftAndRight.start,leftAndRight.end));
 	ProjArray HorizontalArray(yArray);
 
+	// get the bottom and top of the car from the image based on analysis of the projection image
 	Section upandDown = HorizontalArray.getUpAndDown();
 
 	horizontal->getBackground(tempBack,HorizontalArray.getData());
 	horizontal->drawSection(upandDown);
-#ifdef SHOWRESULT
-	
+#ifdef SHOWRESULT	
 	BasicCvApi::Window horizonW("horizonProjection");
 	horizontal->show(horizonW);
 #endif
@@ -98,7 +97,8 @@ std::string CarLogoDetector::detectLogoImage( IplImage* image )
 	
 	
 	vector<temlateLogo>::iterator it = templateImages.begin();
-
+	
+	// extract the sift feature from the input image
 	SIFT::SiftFeature imageFeature = siftController.getImgSIFTFeature(image);
 
 	int max = 0;
@@ -109,10 +109,13 @@ std::string CarLogoDetector::detectLogoImage( IplImage* image )
 
 	for(; it != templateImages.end(); it++)
 	{
+		// get the response as the measurement
 		response = siftController.getSIFTmatchResponse(imageFeature, it->siftfeat);
 
 		if (response != 0)
 		{
+			// record all non-zero responses in case we need to do further research
+			// but in fact, we only need the max response as the final result
 			responses.push_back(response);
 			IplImage* resultImg = siftController.setResultImg(it->ptr.get(),image);
 			resultImgs.push_back(BasicCvApi::MyImagePtr(resultImg));
@@ -121,6 +124,7 @@ std::string CarLogoDetector::detectLogoImage( IplImage* image )
 
 		if(response > max)
 		{
+			// record the max response as the final result
 			max = response;
 			index = it - templateImages.begin();
 		}
